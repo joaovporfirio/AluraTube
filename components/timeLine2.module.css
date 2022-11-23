@@ -1,0 +1,58 @@
+ .yt {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+    overflow: hidden;
+ }
+
+
+ .yt h2 {
+     font-size: 16px;
+     margin-bottom: 16px;
+     text-transform: capitalize;
+ }
+
+ .yt h3 {
+     font-size: 20px;
+     margin-bottom: 16px;
+     text-transform: capitalize;
+ }
+
+ .yt img {
+     
+     font-weight: 500;
+     object-fit: cover;
+     width: 50%;
+     max-width: 210px;
+     height: auto;
+     border-radius: 50%;
+ }
+
+ .yt section {
+     width: 100%;
+     padding: 0;
+     overflow: hidden;
+     padding: 16px;
+
+     
+     }
+
+.yt section div  {
+
+    width: calc(100vw - 16px * 4);
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(200px, 1fr);
+       
+    }
+
+
+ 
+    .yt section div span {
+        padding-top: 8px;
+        display: block;
+        padding-right: 24px; 
+}
+ 

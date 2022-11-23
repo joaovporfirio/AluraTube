@@ -36,6 +36,8 @@ export const StyledTimeline = styled.div`
       grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
       grid-auto-flow: column;
       grid-auto-columns: minmax(200px,1fr);
+      // overflow-x: scroll;
+      // scroll-snap-type: x mandatory;
      
       a {
         scroll-snap-align: start;
@@ -51,21 +53,23 @@ export const StyledTimeline = styled.div`
 `;
 
 
-function TimeLine(props) {
+function TimeLine({searchValue, ...props}) {
     const playlistsNames = Object.keys(props.playlists)
 
     return (
         <StyledTimeline>
             {playlistsNames.map((playlistsName) => {
                 const videos = props.playlists[playlistsName]
-                console.log(videos)
+                // console.log(videos)
                 return (
-                    <section>
+                    <section key={playlistsName}>
                         <h3>{playlistsName}</h3>
                         <div>
-                            {videos.map((video) => {
+                            {videos.filter((video)=> {
+                              return video.title.includes(searchValue)
+                            }).map((video) => {
                                 return (
-                                    <a>
+                                    <a key={video.title}>
                                         <img src={video.thumb} />
                                         <span>
                                             {video.title}

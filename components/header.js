@@ -5,7 +5,9 @@ import styles from "./header.module.css"
 function Header() {
     return (
         <div>
-            <img src="" alt="" />
+            <div className={styles.header_img}>
+                
+            </div>
 
             <div className={styles.user_info}>
                 <img src={`https://github.com/${config.github}.png`} alt="" />
