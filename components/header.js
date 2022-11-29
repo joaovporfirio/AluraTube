@@ -2,9 +2,17 @@ import config from "../config.json"
 import styled from "styled-components"
 import styles from "./header.module.css"
 
+
+const StyledHeader = styled.div`
+
+    background-color:${({theme}) => theme.backgroundLevel1}
+
+`;
+
+
 function Header() {
     return (
-        <div>
+        <StyledHeader>
             <div className={styles.header_img}>
                 
             </div>
@@ -21,7 +29,7 @@ function Header() {
                 </div>
             </div>
 
-        </div>
+        </StyledHeader>
     )
 }
 export default Header

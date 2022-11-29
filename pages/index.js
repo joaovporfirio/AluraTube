@@ -1,9 +1,9 @@
 import React from "react"
-import { CSSReset } from "../components/cssReset"
 import Header from "../components/header"
 import Menu from "../components/Menu/menu"
 import TimeLine from "../components/timeLine"
 import TimeLine2 from "../components/timeLine2"
+
 
 import config from "../config.json"
 
@@ -15,7 +15,6 @@ function HomePage() {
     return (
 
         <>
-            <CSSReset />
 
 
             <div>

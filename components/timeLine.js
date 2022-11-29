@@ -79,7 +79,7 @@ function TimeLine({searchValue, ...props}) {
                             })}
 
                         </div>
-                    </section>
+                    </section> 
                 )
             })}
 
